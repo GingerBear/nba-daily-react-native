@@ -4,11 +4,13 @@ var React = require('react-native');
 
 var {
   Text,
+  Image,
   View
 } = React;
 
 var api = require('../../data');
 var styles = require('./style');
+var Video = require('react-native-video');
 
 module.exports = React.createClass({
   getInitialState: function() {
@@ -42,7 +44,7 @@ module.exports = React.createClass({
   },
   renderVideo: function() {
     return (
-      <View>
+      <View style={styles.container}>
         <Text>{this.state.video.title}</Text>
         <Text>{this.state.video.description}</Text>
         <Video

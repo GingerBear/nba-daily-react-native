@@ -12,7 +12,14 @@ module.exports = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  container: {
+    flex: 1,
+    paddingLeft: 10,
+    paddingRight: 10,
+    paddingTop: 100
+  },
   video: {
-    flex: 1
+    width: 340,
+    height: 191
   },
 });
