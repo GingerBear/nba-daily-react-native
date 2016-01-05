@@ -44,9 +44,12 @@ var createGamesView = function(gamesType) {
       fetchGames()
         .then((response) => response.json())
         .then((responseData) => {
-          console.log(responseData);
+          var games = [];
+          for (var key in responseData) {
+            games = games.concat(responseData[key]);
+          }
           this.setState({
-            dataSource: this.state.dataSource.cloneWithRows(responseData),
+            dataSource: this.state.dataSource.cloneWithRows(games),
             loaded: true
           });
         })
